@@ -2,13 +2,11 @@
 currentIP=`curl icanhazip.com`
 echo $currentIP
 
-wrap={"text":"${currentIP}"}
+payloadTemplate='{\"text\":\"%s\"}'
+payload=$(printf "$payloadTemplate" "$currentIP")
 
+
+echo $payload
 curl -X POST -H 'Content-type: application/json' \
-    --data '{"text":"${currentIP}"}' \
+    --data $payload \
     https://hooks.slack.com/services/"${SLACKCRED}"
-
-
-# curl -X POST -H 'Content-type: application/json' \
-#     --data '{"text":"${currentIP}"}' \
-#     https://hooks.slack.com/services/"${SLACKCRED}"
