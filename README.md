@@ -1,6 +1,7 @@
 # IPAddressAnnouncer
 Goal:  
-  post external IP address to slack  
+  ~~post external IP address to slack~~  
+  post on change of ip(currently posts on running the script)  
 
 Resources:  
 https://api.slack.com/tutorials/slack-apps-hello-world  
