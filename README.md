@@ -1,7 +1,4 @@
 # IPAddressAnnouncer
-Goal:  
-  ~~post external IP address to slack~~  
-  post on change of ip(currently posts on running the script)  
 
 Resources:  
 https://api.slack.com/tutorials/slack-apps-hello-world  
@@ -10,7 +7,7 @@ https://hub.docker.com/_/alpine/
 https://wiki.alpinelinux.org/wiki/Inotifyd  
 
 
-cron job this code(See [Watchtowers](https://github.com/v2tec/watchtower) implementaton of interval)
+the majority of the dockerfile for cron sourced from https://github.com/cheyer/docker-cron
 ```
 currentIP = curl icanhazip.com 
 oldIP = 0
